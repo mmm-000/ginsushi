@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap");
+
+:root {
+  scroll-behavior: smooth;
+}
+a:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  /* ロゴとnav整列 */
+  & div {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 24px 16px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & nav ul {
+    font-size: 20px;
+    display: flex;
+    gap: 24px;
+
+    & a {
+      color: inherit;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+h1 {
+  text-align: center;
+}
+
+body {
+  font-family: "Shippori Mincho", serif;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400px;
+  line-height: normal;
+}
+
+/* 共通 の画像↓コンテナ*/
+div.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 96px 16px 192px;
+}
+
+footer {
+  background-color: #000;
+  text-align: center;
+  & p {
+    padding: 4px;
+  }
+  & a {
+    padding-bottom: 12px;
+    display: block;
+  }
+}
+
+/*-------------------------------
+ハンバーガーアイコン（モバイル用）
+-------------------------------*/
+
+/* 幅:50px, 高さ:50px, ボーダー:なし, 背景色:任意, FlexBox, 横:中央, 縦:中央, 配置:absolute, 上:15px, 右:15px  */
+
+.hmenu {
+  width: 50px;
+  height: 50px;
+  border: none;
+
+  background-color: rgb(11, 57, 68);
+  /* 表示 */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* 幅:35px, 高さ:4px, 背景色:#fff, 角丸:4px, ブロック表示, 配置:absolute, 切り替え:0.5s */
+.hmenu span,
+.hmenu span::before,
+.hmenu span::after {
+  width: 35px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  display: block;
+  position: absolute;
+  transition: 0.5s;
+}
+
+/* 内容:"", 下:12px */
+.hmenu span::before {
+  content: "";
+  bottom: 12px;
+}
+
+/* 内容:"", 上:12px */
+.hmenu span::after {
+  content: "";
+  top: 12px;
+}
+
+/* 背景色:unset */
+.hmenu.close span {
+  background-color: unset;
+}
+
+/* 下:0, 回転:-45° */
+.hmenu.close span::before {
+  bottom: 0px;
+  transform: rotate(-45deg);
+}
+
+/* 上:0, 回転:45° */
+.hmenu.close span::after {
+  top: 0px;
+  transform: rotate(45deg);
+}
+
+@media (max-width: 991px) {
+  header h1 {
+    width: 200px;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
+
+  header div img {
+    display: none;
+  }
+}
+
+/* ハンバーガーメニュー表示 */
+@media (max-width: 575px) {
+  nav ul {
+    display: block !important;
+    & li {
+      padding: 10px;
+    }
+  }
+  /* A上下パターン */
+  /* nav {
+    display: none;
+  } */
+
+  .hmenu {
+    display: flex;
+  }
+
+  nav {
+    /* リストの背景色 */
+    background-color: rgb(11, 57, 68);
+    width: 0px;
+    height: calc(100% - 90px);
+    border: none;
+    box-shadow: -3px 0 6px rgba(0, 0, 0, 0.2);
+    /* ポジション揃える */
+    position: absolute;
+    /* メニューのでてくる位置 */
+    top: 70px;
+    right: 0px;
+    transition: 0.5s;
+    overflow-x: hidden;
+    white-space: nowrap;
+  }
+
+  /* メニュー幅:200px */
+  .hmenu.close + nav {
+    width: 150px;
+  }
+
+  /* 左余白:20px, 左揃え */
+  nav li {
+    padding-left: 20px;
+    text-align: left;
+  }
+}
+
+/* ハンバーガーメニュー */
+
+main article div {
+  display: block;
+  padding: 38px 23px;
+}
+main article p {
+  max-width: 991px;
+  width: 100%;
+  margin: 0 auto;
+}
+main article img {
+  object-fit: cover;
+}
+p.begtext {
+  /* transform: translate(-34%, 8%); */
+  line-height: 96px;
+}

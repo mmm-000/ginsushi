@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Shippori Mincho", serif;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400px;
+  line-height: normal;
+}
+
+/* 共通 の画像↓コンテナ*/
+div.container {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 96px 16px 192px;
+}
+
+header {
+  background-image: url(../img/header.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 1000px;
+  & div {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 24px 16px 0;
+    display: flex;
+    justify-content: space-between;
+    & nav ul {
+      font-size: 20px;
+      display: flex;
+      gap: 20px;
+      text-decoration: none;
+      & a {
+        text-decoration: none;
+        color: inherit;
+        color: #fff;
+      }
+    }
+  }
+  /* ここ直す*/
+  & h1 {
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+  }
+}
+main {
+  background-image: url();
+}
+main article {
+  background: #010e1b;
+  & div {
+    display: flex;
+    width: 1140px;
+    margin: 0 auto;
+    padding: 124px 16px;
+    justify-content: space-between;
+    & p {
+      font-size: 32px;
+      font-weight: lighter;
+      writing-mode: vertical-rl;
+      text-orientation: upright; /* ←この行を追加 */
+      line-height: 58px;
+      letter-spacing: 0.5em;
+      /* 縦書き */
+    }
+  }
+}
+main #kodawari {
+  & h2 {
+    /* 表題の設定 */
+    background-image: url(../img/kodawari_top.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 850px;
+    position: relative;
+
+    & p {
+      font-size: 86px;
+      writing-mode: vertical-rl;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+/* 下記は共通のCSS */
+hgroup {
+  display: flex;
+  justify-content: space-between;
+  color: #010e1b;
+  padding-bottom: 100px;
+  & h3 {
+    font-size: 32px;
+    font-weight: 500px;
+  }
+  & p {
+    flex: 0.63;
+  }
+}
+ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  & img {
+    width: 350px;
+  }
+}
+/* ここまで */
+
+main section#osinagaki h2 {
+  /* 表題の設定 */
+  background-image: url(../img/osinagaki.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 850px;
+  position: relative;
+
+  & p {
+    font-size: 86px;
+    writing-mode: vertical-rl;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+main section#drinks {
+  & h2 {
+    /* 表題の設定 */
+    background-image: url(../img/drinks.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 850px;
+    position: relative;
+
+    & p {
+      font-size: 86px;
+      writing-mode: vertical-rl;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+main section#info {
+  color: #000;
+  & h2 {
+    color: #fff;
+    /* 表題の設定 */
+    background-image: url(../img/shop_night.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 850px;
+    position: relative;
+    & p {
+      font-size: 86px;
+      writing-mode: vertical-rl;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .access {
+    display: flex;
+    justify-content: space-between;
+    width: 1140px;
+    margin: 0 auto;
+    padding: 96px 16px;
+    gap: 34px;
+    & img {
+      flex: 48%;
+    }
+    & .contact {
+      flex: 48%;
+      & h3 {
+        font-size: 32px;
+        padding-bottom: 8px;
+      }
+      & p {
+        font-size: 22px;
+        padding-bottom: 58px;
+      }
+      & address {
+        display: flex;
+        gap: 130px;
+      }
+      & dl div.shop_info {
+        display: flex;
+        gap: 102px;
+        padding-bottom: 58px;
+        & dt {
+          flex-basis: 96px;
+          font-size: 24px;
+        }
+        & dd {
+          font-size: 22px;
+        }
+        & .text {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+footer {
+  background-color: #000;
+  text-align: center;
+  & p {
+    padding: 4px;
+  }
+  & a {
+    padding-bottom: 12px;
+    display: block;
+  }
+}

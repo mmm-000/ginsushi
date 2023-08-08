@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <title>銀寿司</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="index.html"><img src="img/logo.png" alt="logo" width="60px"></a>
+
+            <!-- ハンバーガーメニュー -->
+            <button class="hmenu"><span></span>
+            </button>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html#kodawari">こだわり</a></li>
+                    <li><a href="index.html#osinagaki">お品書き</a></li>
+                    <li><a href="index.html#drinks">お飲み物</a></li>
+                    <li><a href="index.html#info">店舗情報</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>お問い合わせ</h1>
+    </header>
+
+    <!-- スマホで表示 -->
+    <p class="required_phone">*は必須項目です。</p>
+
+    <main>
+
+        <form action="#" method="post">
+            <dl>
+                <div>
+                    <div>
+                        <dt class="required">必須</dt>
+                        <dt>お名前<span>*</span></dt>
+                    </div>
+                    <dd><input type="text" required></dd>
+                </div>
+                <div>
+                    <dt class="left_blank">ふりがな</dt>
+                    <dd><input type="text"></dd>
+                </div>
+                <div>
+                    <div>
+                        <dt class="required">必須</dt>
+                        <dt>電話番号<span>*</span></dt>
+                    </div>
+                    <dd><input type="tel" required></dd>
+                </div>
+                <div>
+                    <dt class="left_blank">メールアドレス</dt>
+                    <dd><input type="email"></dd>
+                </div>
+                <div>
+                    <div>
+                        <dt class="required">必須</dt>
+                        <dt>お問い合わせ種類<span>*</span></dt>
+                    </div>
+                    <dd>
+                        <label><input type="radio" name="category" class="radio" checked>
+                            お問い合わせ
+                        </label>
+                        <label><input type="radio" name="category" class="radio">ご予約</label>
+                    </dd>
+                </div>
+                <div>
+                    <div>
+                        <dt class="required">必須</dt>
+                        <dt>内容<span>*</span></dt>
+                    </div>
+                    <dd><textarea required></textarea></dd>
+                </div>
+            </dl>
+            <div class="button">
+                <p><button>戻る</button></p>
+                <p><button>送信</button></p>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p><img src="img/border.svg" alt=""></p>
+        <a href="#header"><img src="img/logo.png" alt="" width="48px"></a>
+        <small>©2023 ginnsushi.</small>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

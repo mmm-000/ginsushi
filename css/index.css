@@ -1,0 +1,292 @@
+@import url(common.css);
+
+header {
+  background-image: url(../img/header.png);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+header h1 img {
+  height: 60vh;
+}
+
+main {
+  background-image: url(../img/back.jpg);
+}
+main section.shop_night {
+  background: #010e1b;
+  & div {
+    display: flex;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 124px 16px;
+    justify-content: space-between;
+    & h3 {
+      padding-inline: 16px;
+      /* 縦書き */
+      font-size: 32px;
+      font-weight: lighter;
+      writing-mode: vertical-rl;
+      text-orientation: upright; /* ←この行を追加 */
+      line-height: 80px;
+      letter-spacing: 0.5em;
+      /* 縦書き */
+    }
+  }
+}
+main #kodawari {
+  & h2 {
+    /* 表題の設定 */
+    background-image: url(../img/kodawari_top.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 100vh;
+    position: relative;
+
+    & span {
+      font-size: 86px;
+      writing-mode: vertical-rl;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+/* 下記は共通のCSS */
+hgroup {
+  display: flex;
+  justify-content: space-between;
+  color: #010e1b;
+  padding-bottom: 100px;
+  & h3 {
+    font-size: 32px;
+    font-weight: 500px;
+  }
+  & p {
+    flex: 0.63;
+  }
+}
+body #kodawari ul,
+body #drinks ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  & li {
+    flex: 1;
+  }
+}
+
+body #osinagaki ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+main section#osinagaki h2 {
+  /* 表題の設定 */
+  background-image: url(../img/osinagaki.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 850px;
+  position: relative;
+
+  & span {
+    font-size: 86px;
+    writing-mode: vertical-rl;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+main section#drinks {
+  & h2 {
+    /* 表題の設定 */
+    background-image: url(../img/drinks.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 850px;
+    position: relative;
+
+    & span {
+      font-size: 86px;
+      writing-mode: vertical-rl;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+main section#info {
+  & h2 {
+    /* 表題の設定 */
+    background-image: url(../img/shop_night.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 850px;
+    position: relative;
+    & span {
+      font-size: 86px;
+      writing-mode: vertical-rl;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .access {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 96px 16px;
+    gap: 34px;
+    & div {
+      flex: 48%;
+      & iframe {
+        width: 100%;
+      }
+    }
+    & .contact {
+      color: #010e1b;
+      & h3 {
+        font-size: 32px;
+        padding-bottom: 8px;
+      }
+      & p {
+        font-size: 22px;
+        padding-bottom: 58px;
+      }
+      & address {
+        display: flex;
+        gap: 130px;
+      }
+      & dl div.shop_info {
+        display: flex;
+        gap: 102px;
+        padding-bottom: 58px;
+        & dt {
+          flex-basis: 96px;
+          font-size: 24px;
+        }
+        & dd {
+          font-size: 22px;
+        }
+        & .text {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+/* タブレット以下 */
+@media (max-width: 991px) {
+  h2 {
+    height: 500px !important;
+  }
+  h2 span {
+    font-size: 48px !important;
+  }
+
+  /* ハンバーガーメニュー */
+
+  main article div {
+    display: block;
+    padding: 38px 23px;
+  }
+  main article p {
+    max-width: 991px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main article img {
+    object-fit: cover;
+  }
+  p.begtext {
+    /* transform: translate(-34%, 8%); */
+    line-height: 96px;
+  }
+
+  main section.shop_night div {
+    display: block;
+    padding: 32px 16px 48px;
+  }
+  main section.shop_night div p {
+    padding-bottom: 16px;
+  }
+  main section.shop_night div h3 {
+    margin: 0 auto;
+  }
+
+  div.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 32px 16px 96px;
+  }
+  /* 下記は共通のテキスト */
+  hgroup {
+    display: block;
+    padding-bottom: 48px;
+    & h3 {
+      font-size: 32px;
+      font-weight: 500px;
+      padding-bottom: 32px;
+    }
+    & p {
+      flex: 0.63;
+    }
+  }
+
+  body #osinagaki ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    & li {
+      flex: 1;
+      & img {
+        object-fit: cover;
+      }
+    }
+  }
+  section ul {
+    flex-direction: column;
+    & img {
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  /* 六枚目から非表示 */
+  #osinagaki ul li:nth-child(n + 6) {
+    display: none;
+  }
+  section#info .access {
+    flex-direction: column-reverse;
+    & h3 {
+      font-size: 24px;
+      padding-bottom: 24px;
+    }
+  }
+}
+
+/* スマホ */
+@media (max-width: 767px) {
+  .access div iframe {
+    height: 420px;
+  }
+}

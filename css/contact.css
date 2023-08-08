@@ -1,0 +1,149 @@
+@import url(common.css);
+
+body {
+  font-size: 24px;
+  background: linear-gradient(180deg, #155697 0%, rgba(89, 160, 230, 0.712) 52.6%, rgba(19, 96, 173, 0.5) 100%);
+}
+
+header {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+header h1 {
+  font-size: 32px;
+  font-weight: lighter;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-align: center;
+  letter-spacing: 0.5em;
+  margin: 0 auto;
+  padding-bottom: 32px;
+  position: relative;
+  right: 72px;
+}
+
+main {
+  max-width: 1140px;
+  margin: 0 auto;
+  & dl {
+    padding: 0 16px;
+    /* 全体の横並び */
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 74px;
+      /* 必須がある文字列横並び */
+      & > div {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        /* 必須の書式 */
+        & .required {
+          font-size: 20px;
+          width: 48px;
+          height: 32px;
+          background-color: red;
+          text-align: center;
+        }
+      }
+      & dd {
+        flex-basis: 67%;
+        border: none;
+
+        & input:not(.radio) {
+          width: 100%;
+          padding: 4px;
+          border-radius: 5px;
+          border: none;
+          outline-color: rgba(48, 40, 126, 0.911);
+        }
+        & label {
+          padding-right: 12px;
+        }
+        & textarea {
+          width: 100%;
+          padding: 4px;
+          height: 250px;
+          border-radius: 5px;
+          border: none;
+          outline-color: rgba(12, 9, 41, 0.911);
+        }
+      }
+    }
+  }
+}
+/* 必須がついていない文字列 */
+.left_blank {
+  margin-left: 72px;
+}
+/* ボタンの書式 */
+div.button {
+  display: flex;
+  justify-content: center;
+  gap: 96px;
+  padding-bottom: 92px;
+  & button {
+    padding: 2px 22px 2px 30px;
+    /* 右側にスペースを作るので内側余白でそろえる */
+    letter-spacing: 8px;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+}
+
+p.required_phone {
+  display: none;
+}
+span {
+  display: none;
+}
+
+/* タブレット以下 */
+@media (max-width: 991px) {
+  body {
+    font-size: 16px;
+  }
+  main dl > div > div {
+    gap: 6px;
+  }
+  main form dl div .required {
+    font-size: 16px;
+    width: 34px;
+    height: 24px;
+  }
+  .left_blank {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  main dl > div > div {
+    gap: 6px;
+  }
+  dt {
+    font-size: 12px;
+  }
+  /* スマホ表示の＊ */
+  span {
+    display: inline-block;
+    color: rgb(255, 8, 8);
+  }
+  p.required_phone {
+    display: block;
+    color: rgb(255, 8, 8);
+    font-weight: bold;
+    padding-left: 12px;
+    padding-bottom: 12px;
+  }
+  main form dl div .required {
+    display: none;
+  }
+  .left_blank {
+    margin-left: 0;
+  }
+}
